@@ -1,0 +1,95 @@
+doctype html
+html lang="en"
+  head
+    meta charset="UTF-8"
+    title Mood Mixer
+    link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all" rel="stylesheet"
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  body
+    #wrap
+      header role="banner"
+        h1 class="sr-only" Mood Mixer
+        nav class="navbar navbar-inverse" role="navigation"
+          h2 class="sr-only" Top Navigation
+          .container-fluid
+            .navbar-header
+              a class="navbar-brand" Mood Mixer
+
+      main role="main" class="container"
+        .row
+
+    footer
+      .container
+        .row
+          p class="text-muted credit"
+            a href="/privacy" Privacy Policy &bull;
+            a href="/terms" Terms of Use &bull;&copy; 2014 Mood Mixer
+
+/ <!doctype html>
+/ <html lang="en">
+/ <head>
+/   <meta charset="UTF-8">
+/   <title>Mood Mixer</title>
+/   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all">
+/   <link rel="stylesheet" href="/css/main.css" media="all">
+/ </head>
+/ <body>
+/   <div id="wrap">
+/     <header role="banner">
+/       <h1 class="sr-only">Mood Mixer</h1>
+/       <nav class="navbar navbar-inverse" role="navigation">
+/         <h2 class="sr-only">Top Navigation</h2>
+/         <div class="container-fluid">
+/           <div class="navbar-header">
+/             <a class="navbar-brand">Mood Mixer</a>
+/           </div>
+/         </div>
+/       </nav>
+/     </header>
+
+/     <main role="main" class="container">
+/       <div class="row">
+/         <div class="col-md-4 col-md-offset-4">
+/           <form id="login-form" method="post" action="#" accept-charset="UTF-8">
+/             <fieldset>
+
+/               <legend>Please Sign in</legend>
+
+/               <div class="form-group">
+/                 <label for="user_email" class="sr-only">Email</label>
+/                 <input type="text" id="user_email" name="user[email]" placeholder="Email Address">
+/               </div>
+
+/               <div class="form-group" >
+/                 <label for="user_password" class="sr-only">Password</label>
+/                 <input type="password" id="user_password" name="user[password]" placeholder="Password">
+/               </div>
+
+/               <div class="form-group">
+/                 <input class="btn btn-success" type="submit" value="Sign In">
+/               </div>
+
+/             </fieldset>
+/           </form>
+/         </div>
+/       </div>
+/     </main>
+/   </div>
+
+/   <footer>
+/     <div class="container">
+/       <div class="row">
+/         <p class="text-muted credit">
+/           <a href="/privacy">Privacy Policy</a> &bull;
+/           <a href="/terms">Terms of Use</a> &bull;
+/           &copy; 2014 Mood Mixer
+/         </p>
+/       </div>
+/     </div>
+/   </footer>
+
+/ </body>
+/ </html>

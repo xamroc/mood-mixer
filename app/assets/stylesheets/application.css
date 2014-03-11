@@ -11,3 +11,24 @@
  *= require_self
  *= require_tree .
  */
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px; /* Negative indent footer by its height */
+  padding: 0 0 60px;    /* Pad bottom by footer height */
+}
+
+.container .credit {
+  text-align: right;
+  margin: 20px 0;
+}
+
+footer {
+  height: 60px;
+  background-color: hsla( 0, 0.0%, 96.0%, 1 );
+}
