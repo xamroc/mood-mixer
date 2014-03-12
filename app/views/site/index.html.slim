@@ -33,6 +33,12 @@ html lang="en"
                 .form-group
                   input.btn.btn-success type="submit" value=("Sign In")
 
+        ol
+          - @users.each do |user|
+            li
+              = user.email
+
+
     footer
       .container
         .row
