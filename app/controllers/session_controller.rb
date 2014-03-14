@@ -1,14 +1,15 @@
 class SessionController < ApplicationController
 
   def new
-    render text: "Display the login form."
+    @messages = flash.map {|key,value| "#{key.upcase} #{value}"}.join(";")
+    # render text: "Display the login form."
   end
 
   def create
     @user = User.authenticate(params[:user][:email], params[:user][:password])
 
     if @user
-      session[:user_id] = @user_id
+      session[:user_id] = @user.id
       # render text: "Logged in yo! #{@user.email}"
       redirect_to root_url
     else
@@ -18,7 +19,8 @@ class SessionController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    render text: "Log the user out."
+    # render text: "Log the user out."
+    redirect_to login_url, notice: "You've successfully logged out."
   end
 
 end
