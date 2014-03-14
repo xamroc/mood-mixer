@@ -1,7 +1,6 @@
 class SessionController < ApplicationController
 
   def new
-    @messages = flash.map {|key,value| "#{key.upcase} #{value}"}.join(";")
     # render text: "Display the login form."
   end
 
@@ -13,7 +12,8 @@ class SessionController < ApplicationController
       # render text: "Logged in yo! #{@user.email}"
       redirect_to root_url
     else
-      render text: "Who are you?"
+      flash.now[:alert] = "Unable to log you in. Please check your email and password and try again."
+      render :new
     end
   end
 
