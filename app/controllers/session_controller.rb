@@ -13,6 +13,7 @@ class SessionController < ApplicationController
     if password.blank?
       # render text: "Time to reset password."
       user.set_password_reset if user
+      UserNotifier.reset_password(user).deliver
       flash.now[:notice] = "We'll send you an email."
       render :new
     elsif user and user.authenticate(password) #for any account, valid or not
