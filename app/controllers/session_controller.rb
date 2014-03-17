@@ -11,7 +11,10 @@ class SessionController < ApplicationController
     password = params[:user][:password]
 
     if password.blank?
-      render text: "Time to reset password."
+      # render text: "Time to reset password."
+      user.set_password_reset if user
+      flash.now[:notice] = "We'll send you an email."
+      render :new
     elsif user and user.authenticate(password) #for any account, valid or not
       session[:user_id] = user.id
       redirect_to root_url
