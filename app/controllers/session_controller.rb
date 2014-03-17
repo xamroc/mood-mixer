@@ -6,11 +6,14 @@ class SessionController < ApplicationController
   end
 
   def create
-    @user = User.authenticate(params[:user][:email], params[:user][:password])
+    # @user = User.authenticate(params[:user][:email], params[:user][:password])
+    user = User.find_by(email: params[:user][:email])
+    password = params[:user][:password]
 
-    if @user
-      session[:user_id] = @user.id
-      # render text: "Logged in yo! #{@user.email}"
+    if password.blank?
+      render text: "Time to reset password."
+    elsif user and user.authenticate(password) #for any account, valid or not
+      session[:user_id] = user.id
       redirect_to root_url
     else
       flash.now[:alert] = "Unable to log you in. Please check your email and password and try again."
