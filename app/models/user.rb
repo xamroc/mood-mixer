@@ -3,6 +3,7 @@ require 'bcrypt'
 PASSWORD_RESET_EXPIRES = 4
 
 class User
+
   include Mongoid::Document
   include Mongoid::Timestamps
 
@@ -24,7 +25,10 @@ class User
   end
 
   def self.find_by_code code
-    User.find_by({:code => code, :expires_at => {"$gte" => Time.now.gmtime}})
+    if user = User.find_by({:code => code, :expires_at => {"$gte" => Time.now.gmtime}})
+      user.set_expiration
+    end
+    user
   end
 
   def authenticate(password)
