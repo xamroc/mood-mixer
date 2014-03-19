@@ -18,17 +18,11 @@ class PasswordResetter
   end
 
   def reset_password(user, params)
-
     if user.reset_password( params )
       # success
-      UserNotifier.password_was_reset(user).deliver
-      user
-    else
-      # fail
-      @flash.now[:alert] = user.errors
-      nil
+      UserNotifier.password_was_reset( user ).deliver
+      return true
     end
-
   end
 
   def update_user_and_send_email

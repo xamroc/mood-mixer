@@ -52,7 +52,9 @@ class User
       self.errors.add(:password, "can't be blank")
       false
     else
-      self.update_attributes(params.merge( code: nil, expires_at: nil ))
+      if self.update_attributes(params)
+        self.update_attributes(params.merge( code: nil, expires_at: nil ))
+      end
     end
   end
 

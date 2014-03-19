@@ -12,17 +12,17 @@
   def update
     if @user = User.find_by_code( params[:code] )
     # if user is found
-      u = PasswordResetter.new(flash).reset_password(@user, user_params)
-      binding.pry
-      if u
+      if PasswordResetter.new(flash).reset_password(@user, user_params)
         return if log_user_in( @user, RESET_SUCCESS )
+      else
+        flash.now[:alert] = @user.errors
       end
-      render :edit
 
     # otherwise show a message not found
     else
-      render text: "No code found"
+      flash.now[:alert] = LINK_EXPIRED
     end
+    render :edit
 
   end
 
