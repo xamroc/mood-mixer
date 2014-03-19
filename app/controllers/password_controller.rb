@@ -1,6 +1,7 @@
   class PasswordController < ApplicationController
 
   LINK_EXPIRED = "Your reset link has expired, Please generate a new one"
+  RESET_SUCCESS = "Your password has been successfully reset."
 
   def edit
     unless @user = User.find_by_code( params[:code] )
@@ -11,22 +12,12 @@
   def update
     if @user = User.find_by_code( params[:code] )
     # if user is found
-      if params[:user][:password].blank?
-
-        @user.errors.add(:password, "can't be blank")
-        flash.now[:alert] = @user.errors
-        render :edit
-
-      elsif @user.reset_password( user_params )
-
-        UserNotifier.password_was_reset(@user).deliver
-        log_user_in( @user, "Your password has been successfully reset." )
-
-      else
-        flash.now[:alert] = @user.errors
-        render :edit
-
+      u = PasswordResetter.new(flash).reset_password(@user, user_params)
+      binding.pry
+      if u
+        return if log_user_in( @user, RESET_SUCCESS )
       end
+      render :edit
 
     # otherwise show a message not found
     else
