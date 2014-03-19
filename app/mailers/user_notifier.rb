@@ -8,6 +8,8 @@ class UserNotifier < ActionMailer::Base
   end
 
   def password_was_reset(user)
+    @user = user
+    mail to: @user.email, subject: "[MoodMixer] Password was reset"
   end
 
 end
