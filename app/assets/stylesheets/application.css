@@ -36,3 +36,13 @@ footer {
 .logout-link {
   margin-top: 8px;
 }
+
+.current_user_header {
+  color: hsla( 0, 0.0%, 94.0%, 1 );
+  float: left;
+  margin: 14px;
+}
+
+.mood {
+
+}
