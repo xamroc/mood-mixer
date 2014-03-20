@@ -14,4 +14,7 @@ MoodMixer::Application.routes.draw do
   put 'reset/:code' => 'password#update'
   patch 'reset/:code' => 'password#update'
 
+  get 'tag' => 'music#new'
+  post 'tag' => 'music#create'
+
 end
