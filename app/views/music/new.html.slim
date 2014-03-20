@@ -1,13 +1,13 @@
 .col-md-4.col-md-offset-4
-  = form_for :user, url: tag_url, html: { id: "tag-form" } do |f|
+  = form_for :music_item, url: tag_url, html: { id: "tag-form" } do |f|
     fieldset
-      legend Please sign in
+      legend Please Tag Music
       / .form-group = flash.map {|key,value| "#{key.upcase} #{value}"}.join(";")
       .form-group
-        = f.label :email, class: "sr-only"
-        = f.text_field :email, class: "form-control", placeholder: "Email address"
+        = f.label :href, class: "sr-only"
+        = f.text_field :href, class: "form-control", placeholder: "Music link"
       .form-group
-        = f.label :password, class: "sr-only"
-        = f.password_field :password, class: "form-control", placeholder: "Password"
+        = f.label :mood, class: "sr-only"
+        = f.password_field :mood, class: "form-control", placeholder: "Mood"
       .form-group
-        = f.submit "Sign in", class: "btn btn-success"
+        = f.submit "Tag it", class: "btn btn-success"
