@@ -1,5 +1,7 @@
 class MusicController < ApplicationController
 
+  before_action :is_authenticated?
+
   def new
     render :new
   end
