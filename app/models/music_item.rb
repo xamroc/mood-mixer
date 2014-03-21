@@ -6,8 +6,6 @@ class MusicItem
   field :href, type: String
   field :mood, type: String
 
-  def add_item(params)
-    puts "Parameters passed: #{params}"
-    self.update_attributes(params)
-  end
+  belongs_to :user
+
 end

@@ -7,8 +7,19 @@ class MusicController < ApplicationController
   end
 
   def create
-    if MusicItem.new.add_item(music_params)
-      redirect_to root_url
+    # puts "This is #{@current_user}"
+
+    # @music_item = current_user.music_items.create(music_params)
+
+    # if @music_item.valid?
+
+    if @music_item = MusicItem.new(music_params)
+      @music_item.user = current_user
+      if @music_item.save
+        redirect_to root_url
+      else
+        render text: "Fail inside."
+      end
     else
       render text: "Fail."
     end
