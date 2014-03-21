@@ -7,7 +7,16 @@
         = f.label :href, class: "sr-only"
         = f.text_field :href, class: "form-control", placeholder: "Music link"
       .form-group
-        = f.label :mood, class: "sr-only"
-        = f.password_field :mood, class: "form-control", placeholder: "Mood"
+        = f.radio_button :mood, "happy"
+        = f.label :mood, "Happy"
+
+        = f.radio_button :mood, "sad"
+        = f.label :mood, "Sad"
+
+        = f.radio_button :mood, "motivational"
+        = f.label :mood, "Motivational"
+
+        = f.radio_button :mood, "angry"
+        = f.label :mood, "Angry"
       .form-group
         = f.submit "Tag it", class: "btn btn-success"

@@ -7,6 +7,7 @@ class MusicItem
   field :mood, type: String
 
   def add_item(params)
+    puts "Parameters passed: #{params}"
     self.update_attributes(params)
   end
 end
