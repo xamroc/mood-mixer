@@ -13,6 +13,8 @@
  */
 html, body {
   height: 100%;
+  background: -prefix-linear-gradient(top, hsla(226, 63%, 10%, 1), white 80%, orange);
+  background: linear-gradient(to bottom, hsla(226, 63%, 10%, 1), white 80%, orange);
 }
 
 #wrap {
@@ -29,8 +31,7 @@ html, body {
 }
 
 footer {
-  height: 60px;
-  background-color: hsla( 0, 0.0%, 96.0%, 1 );
+  height: 0px;
 }
 
 .logout-link {

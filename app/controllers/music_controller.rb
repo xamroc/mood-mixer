@@ -18,10 +18,10 @@ class MusicController < ApplicationController
       if @music_item.save
         redirect_to root_url
       else
-        render text: "Fail inside."
+        render text: "Fail to save music item."
       end
     else
-      render text: "Fail."
+      render text: "Fail to create new music item."
     end
   end
 
