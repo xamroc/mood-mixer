@@ -22,9 +22,15 @@ class SessionController < ApplicationController
   end
 
   def registration
+    redirect_to root_url, notice: "You are logged in." if current_user
   end
 
   def register
+    render text: "Register it! Motherfucker!"
+    # if params[:user][:password].blank?
+    #   RegisterUser.new(flash).handle_blank_passowrd(user_params)
+    # else
+    #   return if log_user_in()
   end
 
   def destroy
