@@ -11,7 +11,6 @@ class User
 
   attr_accessor :password, :password_confirmation
 
-
   field :email, type: String
   field :salt, type: String
   field :fish, type: String

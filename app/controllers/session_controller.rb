@@ -21,8 +21,10 @@ class SessionController < ApplicationController
     render :new
   end
 
-  def register
+  def registration
+  end
 
+  def register
   end
 
   def destroy
