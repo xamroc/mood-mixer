@@ -5,6 +5,7 @@ MoodMixer::Application.routes.draw do
   get     'login'   => 'session#new'
   post    'login'   => 'session#create'
   delete  'logout'  => 'session#destroy'
+  get     'register'=> 'session#register'
   # get     'logout'  => 'session#destroy' # TODO: remove before deployment
 
   get 'privacy' => 'site#privacy'

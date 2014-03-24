@@ -21,6 +21,10 @@ class SessionController < ApplicationController
     render :new
   end
 
+  def register
+
+  end
+
   def destroy
     log_user_out
     # render text: "Log the user out."
