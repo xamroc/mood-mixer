@@ -26,7 +26,7 @@ class SessionController < ApplicationController
   end
 
   def register
-    render UserCreator.new.create_user( user_params )
+    UserCreator.new.create_user( user_params )
     redirect_to root_url
   end
 
