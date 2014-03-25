@@ -27,6 +27,9 @@ class SessionController < ApplicationController
 
   def register
     UserCreator.new.create_user( user_params )
+    if user = User.find_by(email: user_params[:email])
+      UserNotifier.create_user( user ).deliver
+    end
     redirect_to root_url
   end
 
