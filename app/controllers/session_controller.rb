@@ -26,7 +26,6 @@ class SessionController < ApplicationController
   end
 
   def register
-
     user = User.new(user_params)
     user.save
 
@@ -34,7 +33,7 @@ class SessionController < ApplicationController
       UserNotifier.create_user( user ).deliver
       redirect_to root_url, notice: "You have created a new account."
     else
-      @flash.now[:alert] = "Registration failed. Please try again later."
+      redirect_to register_url, alert: "Registration failed. Please try again later."
     end
   end
 

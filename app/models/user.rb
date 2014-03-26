@@ -28,8 +28,6 @@ class User
     user
   end
 
-
-
   def self.authenticate email, password
     user = User.find_by email: email
     user if user and user.authenticate(password)

@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.destroy_all
+MusicItem.destroy_all
 
 temp_password = "123"
 
@@ -22,5 +23,32 @@ User.create([
   { email: "lau@gmail.com",
     password: temp_password,
     password_confirmation: temp_password
+  }
+])
+
+MusicItem.create([
+  { href: "Let It Go",
+    mood: "happy"
+  },
+  { href: "Call Me Maybe",
+    mood: "happy"
+  },
+  { href: "Never Gonna Give You Up",
+    mood: "sad"
+  },
+  { href: "To Zanarkand",
+    mood: "sad"
+  },
+  { href: "Star Wars Gangsta Rap",
+    mood: "angry"
+  },
+  { href: "Testify",
+    mood: "angry"
+  },
+  { href: "Let It Go",
+    mood: "motivational"
+  },
+  { href: "Gangnam Style",
+    mood: "motivational"
   }
 ])
