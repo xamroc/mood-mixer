@@ -26,11 +26,16 @@ class SessionController < ApplicationController
   end
 
   def register
-    UserCreator.new.create_user( user_params )
+
+    user = User.new(user_params)
+    user.save
+
     if user = User.find_by(email: user_params[:email])
       UserNotifier.create_user( user ).deliver
+      redirect_to root_url, notice: "You have created a new account."
+    else
+      @flash.now[:alert] = "Registration failed. Please try again later."
     end
-    redirect_to root_url
   end
 
   def destroy
@@ -42,7 +47,7 @@ class SessionController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
 end
