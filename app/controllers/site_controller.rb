@@ -4,6 +4,7 @@ class SiteController < ApplicationController
 
   def index
     @users = User.all.entries
+    @user_music_items = current_user.music_item.all.entries
   end
 
   def privacy
