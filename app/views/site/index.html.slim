@@ -4,13 +4,17 @@
 
 .row
   .col-md-3
-    button.mood Happy
+    button.mood.happy Happy
 
   .col-md-3
-    button.mood Sad
+    button.mood.sad Sad
 
   .col-md-3
-    button.mood Motivational
+    button.mood.motivational Motivational
 
   .col-md-3
-    button.mood Angry
+    button.mood.angry Angry
+
+.row
+  .col-md-4.col-md-offset-4
+    = current_user.music_item.all.entries

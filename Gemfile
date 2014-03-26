@@ -5,6 +5,7 @@ gem 'activesupport', require: 'active_support'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'coffee-rails'
 gem 'slim'
 gem "bson_ext"
 gem "mongoid", github: "mongoid/mongoid"
