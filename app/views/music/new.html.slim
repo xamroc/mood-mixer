@@ -18,5 +18,9 @@
 
         = f.radio_button :mood, "angry"
         = f.label :mood, "Angry"
-      .form-group
-        = f.submit "Tag it", class: "btn btn-success"
+      .row
+        .col-md-3
+          .form-group
+            = f.submit "Tag it", class: "btn btn-success"
+        .col-md-3
+            = link_to_function "Back", "history.back()", class: "btn btn-danger"
