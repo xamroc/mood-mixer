@@ -1,0 +1,1 @@
+$("#music-list").html(@result)

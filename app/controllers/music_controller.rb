@@ -26,7 +26,13 @@ class MusicController < ApplicationController
   end
 
   def list
-    @user_music_items = current_user.music_item.all.entries
+    @result = MusicItem.where( mood: params["mood"] )
+    # puts @result
+    # @user_music_items = current_user.music_item.all.entries
+    # respond_to do |format|
+    #   format.js
+    # end
+    render json: @result
   end
 
   private

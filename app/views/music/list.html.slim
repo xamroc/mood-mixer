@@ -2,5 +2,9 @@
   .col-md-4.col-md-offset-4
     list
       ul
-        - for music_item in @user_music_items
-          li = music_item.href
+        - for item in @result
+          li = item.href
+    / list
+    /   ul
+    /     - for music_item in @user_music_items
+    /       li = music_item.href
