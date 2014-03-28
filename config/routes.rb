@@ -19,4 +19,6 @@ MoodMixer::Application.routes.draw do
   get 'tag' => 'music#new'
   post 'tag' => 'music#create'
 
+  get 'list' => 'music#list'
+
 end

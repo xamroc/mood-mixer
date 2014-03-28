@@ -25,6 +25,10 @@ class MusicController < ApplicationController
     end
   end
 
+  def list
+    @user_music_items = current_user.music_item.all.entries
+  end
+
   private
 
   def music_params
