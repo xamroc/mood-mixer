@@ -53,5 +53,9 @@ footer {
     background: hsla(18, 100%, 50%, 1);
 }
 .round-button:hover {
-    background: hsla(61, 100%, 50%, 1);
+  background: hsla(61, 100%, 50%, 1);
+}
+
+#music-list {
+  color: white;
 }
