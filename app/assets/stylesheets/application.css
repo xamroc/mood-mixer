@@ -30,6 +30,13 @@ html, body {
   margin: 20px 0;
 }
 
+.cover {
+  background-color: black;
+  width: 560px;
+  height: 315px;
+  margin: 2px;
+}
+
 footer {
   height: 0px;
 }

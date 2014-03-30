@@ -7,12 +7,6 @@ class MusicController < ApplicationController
   end
 
   def create
-    # puts "This is #{@current_user}"
-
-    # @music_item = current_user.music_items.create(music_params)
-
-    # if @music_item.valid?
-
     if @music_item = MusicItem.new(music_params)
       @music_item.user = current_user
       if @music_item.save
@@ -38,6 +32,6 @@ class MusicController < ApplicationController
   private
 
   def music_params
-    params.require(:music_item).permit(:href, :mood)
+    params.require(:music_item).permit(:title, :href, :mood)
   end
 end

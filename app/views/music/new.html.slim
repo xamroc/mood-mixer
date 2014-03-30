@@ -4,6 +4,9 @@
       legend Please Tag Music
       / .form-group = flash.map {|key,value| "#{key.upcase} #{value}"}.join(";")
       .form-group
+        = f.label :title, class: "sr-only"
+        = f.text_field :title, class: "form-control", placeholder: "Title"
+      .form-group
         = f.label :href, class: "sr-only"
         = f.text_field :href, class: "form-control", placeholder: "Music link"
       .form-group
