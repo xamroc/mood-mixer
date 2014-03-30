@@ -13,10 +13,11 @@ class MusicController < ApplicationController
         redirect_to root_url
       else
         flash.now[:alert] = "Music link and mood must be entered."
+        render :new
       end
-      render :new
     else
       flash.now[:alert] = "Failed to create music item."
+      render :new
     end
   end
 
