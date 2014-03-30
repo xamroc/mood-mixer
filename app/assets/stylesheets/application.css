@@ -64,13 +64,20 @@ footer {
 }
 
 #music-list {
-  background-color: black;
-  color: white;
   list-style-type: none;
 }
 
+#music-item {
+  background-color: hsla(0, 0%, 23%, 1);
+  color: hsla(0, 0%, 56%, 1);
+  padding-left: 4px;
+  -webkit-transition: padding-left 2s;
+  transition: padding-left .2s;
+}
+
 #music-item:hover {
-  background-color: yellow;
-  color: blue;
+  background-color: hsla(0, 0%, 40%, 1);
+  color: white;
+  padding-left: 12px;
   cursor: pointer;
 }
