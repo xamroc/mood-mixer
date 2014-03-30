@@ -7,6 +7,9 @@ class MusicItem
   field :href, type: String
   field :mood, type: String
 
+  validates :href, presence: true
+  validates :mood, presence: true
+
   belongs_to :user
 
 end

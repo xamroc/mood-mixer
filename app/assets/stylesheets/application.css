@@ -64,5 +64,13 @@ footer {
 }
 
 #music-list {
+  background-color: black;
   color: white;
+  list-style-type: none;
+}
+
+#music-item:hover {
+  background-color: yellow;
+  color: blue;
+  cursor: pointer;
 }
