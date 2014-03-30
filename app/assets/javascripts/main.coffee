@@ -17,5 +17,5 @@ $ ->
   $("#music-list").on "click", "#music-item", (e) ->
     src = $(@).attr("data-href")
     $("#music-player").html("")
-    $("#music-player").append $("<iframe width='560' height='315' src='" + src + "' frameborder='0'></iframe>")
+    $("#music-player").append $("<iframe width='560' height='315' src='//www.youtube.com/embed/" + src + "' frameborder='0'></iframe>")
     e.preventDefault

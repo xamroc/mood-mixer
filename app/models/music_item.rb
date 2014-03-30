@@ -8,6 +8,7 @@ class MusicItem
   field :mood, type: String
 
   before_save :get_video_id
+  validates :title, presence: true
   validates :href, presence: true
   validates :mood, presence: true
 

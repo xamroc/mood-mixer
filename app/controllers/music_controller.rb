@@ -12,7 +12,7 @@ class MusicController < ApplicationController
       if @music_item.save
         redirect_to root_url
       else
-        flash.now[:alert] = "Music link and mood must be entered."
+        flash.now[:alert] = "Please make sure all fields are filled."
         render :new
       end
     else
