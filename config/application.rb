@@ -23,5 +23,8 @@ module MoodMixer
         request_specs: false
       g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
+    config.action_view.field_error_proc = Proc.new do |html_tag, instance|
+      html_tag
+    end
   end
 end

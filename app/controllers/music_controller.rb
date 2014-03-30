@@ -12,10 +12,11 @@ class MusicController < ApplicationController
       if @music_item.save
         redirect_to root_url
       else
-        render text: "Fail to save music item."
+        flash.now[:alert] = "Music link and mood must be entered."
       end
+      render :new
     else
-      render text: "Fail to create new music item."
+      flash.now[:alert] = "Failed to create music item."
     end
   end
 
