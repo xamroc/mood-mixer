@@ -1,7 +1,7 @@
 .col-md-4.col-md-offset-4
   = form_for :user, url: login_url, html: { id: "login-form" } do |f|
     fieldset
-      legend Please sign in
+      legend#legend Please sign in
       / .form-group = flash.map {|key,value| "#{key.upcase} #{value}"}.join(";")
       .form-group
         = f.label :email, class: "sr-only"
