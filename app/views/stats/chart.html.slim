@@ -1,2 +1,21 @@
 .row
-  .col-md-4.col-md-offset-4#chart
+  .col-md-4
+    h1#chart-header Your Music totals:
+    .stats
+      p
+        | Happy Music:&nbsp
+        span = @music_data.where(mood: "happy").length
+      p
+        | Sad Music:&nbsp
+        span = @music_data.where(mood: "sad").length
+      p
+        | Motivational Music:&nbsp
+        span = @music_data.where(mood: "motivational").length
+      p
+        | Angry Music:&nbsp
+        span = @music_data.where(mood: "angry").length
+
+  .col-md-4#chart
+.row
+  .col-md-8.col-md-offset-8
+    = link_to_function "Back", "history.back()", class: "btn btn-danger"

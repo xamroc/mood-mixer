@@ -3,9 +3,9 @@ $ ->
     type: "POST"
     url: "stats"
     success: (data, textStatus, jqXHR) ->
-      w = 400
-      h = 400
-      r = 200
+      w = 380
+      h = 380
+      r = 190
       color = d3.scale.category10()
 
       data = [{"label":"Motivational", "value":data.motivational},
@@ -44,4 +44,5 @@ $ ->
           d.outerRadius = r
           "translate(" + arc.centroid(d) + ")"
         .attr("text-anchor", "middle")
+        .attr("fill", "hsla(0, 0%, 90%, 1)")
         .text (d, i) -> data[i].label

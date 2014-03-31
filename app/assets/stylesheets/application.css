@@ -66,10 +66,20 @@ footer {
   background: hsla(18, 100%, 50%, 1);
 }
 
-#pick-beat {
+.stats {
+  color: hsla(0, 0%, 100%, 1);
+}
+
+#pick-header {
   color: hsla(0, 0%, 80%, 1);
   font-size: x-large;
   margin-left: 60px;
+}
+
+#chart-header {
+  color: hsla(0, 0%, 80%, 1);
+  font-size: x-large;
+  text-decoration: underline;
 }
 
 #tag-button {
@@ -107,6 +117,6 @@ footer {
 }
 
 .slice text {
-  font-size: 14pt;
+  font-size: 12pt;
   font-family: Helvetica;
 }

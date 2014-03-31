@@ -3,6 +3,7 @@ class StatsController < ApplicationController
   before_action :is_authenticated?
 
   def chart
+    @music_data = MusicItem.where( user: current_user )
   end
 
   def data
