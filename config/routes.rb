@@ -22,5 +22,6 @@ MoodMixer::Application.routes.draw do
   post 'list' => 'music#list'
 
   get 'stats' => 'stats#chart'
+  post 'stats' => 'stats#data'
 
 end

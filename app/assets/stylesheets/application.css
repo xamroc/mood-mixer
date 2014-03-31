@@ -105,3 +105,8 @@ footer {
   padding-left: 12px;
   cursor: pointer;
 }
+
+.slice text {
+  font-size: 14pt;
+  font-family: Helvetica;
+}
