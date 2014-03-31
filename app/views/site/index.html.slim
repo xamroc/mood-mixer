@@ -1,9 +1,6 @@
 .row
   .col-md-4.col-md-offset-4
-    h1 Choose your beat!
-
-  .col-md-2.col-md-offset-2
-    = button_to "TAG", tag_url, :method => :get, :class => "round-button"
+    h1#pick-beat Choose your beat!
 
 .row
   .col-md-3.col
@@ -11,15 +8,18 @@
   .col-md-3#music-player
     .cover width="560" height="315"
 
-.row
-  .col-md-3
+.row#mood-buttons
+  .col-md-2
+    = button_to "Tag", tag_url, :method => :get, :id => "tag-button"
+
+  .col-md-2
     button.mood.round-button#happy HAPPY
 
-  .col-md-3
+  .col-md-2
     button.mood.round-button#sad SAD
 
-  .col-md-3
+  .col-md-2
     button.mood.round-button#motivational MOTIVATIONAL
 
-  .col-md-3
+  .col-md-2
     button.mood.round-button#angry ANGRY
