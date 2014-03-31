@@ -7,12 +7,13 @@
     ul#music-list
   .col-md-3#music-player
     .cover width="560" height="315"
+  .col-md-3.col-md-offset-3
+    p = button_to "Tag", tag_url, :method => :get, :id => "tag-button"
+    p = button_to "Stats", stats_url, :method => :get, :id => "stats-button"
 
 .row#mood-buttons
-  .col-md-2
-    = button_to "Tag", tag_url, :method => :get, :id => "tag-button"
 
-  .col-md-2
+  .col-md-2.col-md-offset-2
     button.mood.round-button#happy HAPPY
 
   .col-md-2
