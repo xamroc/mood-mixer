@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require main
 //= require ./vendor/noty/packaged/jquery.noty.packaged.min
 //= require ./vendor/noty/themes/default
+//= require ./vendor/d3/d3
+//= require main
+//= require chart

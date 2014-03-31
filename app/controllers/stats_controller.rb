@@ -4,7 +4,5 @@ class StatsController < ApplicationController
 
   def chart
 
-
-
   end
 end
