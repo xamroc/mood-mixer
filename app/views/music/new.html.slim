@@ -11,16 +11,16 @@
         = f.text_field :href, class: "form-control", placeholder: "Music link"
       .form-group
         = f.radio_button :mood, "happy"
-        = f.label :mood, "Happy"
+        = f.label "mood_happy", "Happy"
 
         = f.radio_button :mood, "sad"
-        = f.label :mood, "Sad"
+        = f.label "mood_sad", "Sad"
 
         = f.radio_button :mood, "motivational"
-        = f.label :mood, "Motivational"
+        = f.label "mood_motivational", "Motivational"
 
         = f.radio_button :mood, "angry"
-        = f.label :mood, "Angry"
+        = f.label "mood_angry", "Angry"
       .row
         .col-md-3
           .form-group
