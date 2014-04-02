@@ -86,23 +86,9 @@ footer {
   text-decoration: underline;
 }
 
-#tag-button {
+.feature-btn {
   width: 80px;
-  height: 20px;
-  border-radius: 10%;
-  border: 0px;
   overflow: hidden;
-  background: hsla(41, 100%, 54%, 1);
-  color: white;
-}
-
-#stats-button {
-  width: 80px;
-  height: 20px;
-  border-radius: 10%;
-  border: 0px;
-  overflow: hidden;
-  background: hsla(101, 34%, 52%, 1);
   color: white;
 }
 

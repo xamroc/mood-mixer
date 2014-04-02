@@ -7,7 +7,6 @@ class StatsController < ApplicationController
   end
 
   def data
-    music_data
     happy_count = music_data.where( mood: "happy").length
     sad_count = music_data.where( mood: "sad").length
     motivational_count = music_data.where( mood: "motivational").length
