@@ -18,4 +18,4 @@ $ ->
     src = $(@).attr("data-href")
     $("#music-player").html("")
     $("#music-player").append $("<iframe width='560' height='315' src='//www.youtube.com/embed/" + src + "' frameborder='0'></iframe>")
-    e.preventDefault
+    e.preventDefault()

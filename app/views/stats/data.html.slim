@@ -4,15 +4,15 @@
     .stats
       p
         | Happy Music:&nbsp
-        span = @music_data.where(mood: "happy").length
+        span#happy-count = @happy_count
       p
         | Sad Music:&nbsp
-        span = @music_data.where(mood: "sad").length
+        span#sad-count = @sad_count
       p
         | Motivational Music:&nbsp
-        span = @music_data.where(mood: "motivational").length
+        span#motivational-count = @motivational_count
       p
         | Angry Music:&nbsp
-        span = @music_data.where(mood: "angry").length
+        span#angry-count = @angry_count
 
   .col-md-4#chart
